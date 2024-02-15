@@ -16,11 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
             deleteButton.textContent = "Delete";
             li.appendChild(deleteButton);
 
-            deleteButton.addEventListener("click", () {
+            deleteButton.addEventListener("click", function() {
                 itemList.removeChild(li);
             });
 
             itemNameInput.value = "";
         }
+    });
     });
 });
