@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const deleteButton = document.createElement("button");
             deleteButton.textContent = "Delete";
-            li.(deleteButton);
+            li.appendChild(deleteButton);
 
-            deleteButton.addEventListener("click", ) {
-                itemList.(li);
+            deleteButton.addEventListener("click", () {
+                itemList.removeChild(li);
             });
 
             itemNameInput.value = "";
