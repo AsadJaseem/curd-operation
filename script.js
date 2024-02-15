@@ -1,25 +1,37 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("crudForm");
-    const itemList = document.getElementById("itemList");
+let itemList = [];
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const itemNameInput = document.getElementById("itemName");
-        const itemName = itemNameInput.value.trim();
+function addItem() {
+    let inputField = document.getElementById("inputField");
+    let newItem = inputField.value.trim();
+    if (newItem !== "") {
+        itemList.push(newItem);
+        inputField.value = "";
+        displayItems();
+    } else {
+        alert("Please enter text!");
+    }
+}
 
-        if (itemName !== "") {
-            const li = document.createElement("li");
-            li.textContent = itemName;
-            itemList.appendChild(li);
-
-            const deleteButton = document.createElement("button");
-            deleteButton.textContent = "Delete";
-            li.appendChild(deleteButton);
-
-            deleteButton.addEventListener("click", function() {
-                itemList.removeChild(li);
-            });
-
-            itemNameInput.value = "";
-        }
+function displayItems() {
+    let itemListElement = document.getElementById("itemList");
+    itemListElement.innerHTML = "";
+    itemList.forEach(item => {
+        let li = document.createElement("li");
+        li.textContent = item;
+        itemListElement.appendChild(li);
+        li.addEventListener('click', function() {
+            let result = confirm("Do you want to delete this item?");
+            if (result) {
+                deleteItem(item);
+            }
+        });
     });
+}
+
+function deleteItem(item) {
+    let index = itemList.indexOf(item);
+    if (index !== -1) {
+        itemList.splice(index, 1);
+        displayItems();
+    }
+}
