@@ -9,8 +9,25 @@
 <body>
     <div class="container">
         <h1>CRUD Operation</h1>
+        
         <form id="crudForm">
             <input type="text" id="itemName" placeholder="Enter Item Name" required>
+             <div>
+                        <label for="productCode">Product code</label>
+                        <input type="text" name="productcode" id="productcode">
+                    </div>
+                    <div>
+                        <label for="product">Product Name</label>
+                        <input type="text" name="product" id="product">
+                    </div>
+                    <div>
+                        <label for="qty">Product Quantity</label>
+                        <input type="number" name="qty" id="qty">
+                    </div>
+                    <div>
+                        <label for="perPrice">Price</label>
+                        <input type="number" name="perPrice" id="perPrice">
+                    </div>
             <button type="submit">Add Item</button>
         </form>
         <ul id="itemList"></ul>
