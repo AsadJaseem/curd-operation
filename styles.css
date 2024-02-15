@@ -1,7 +1,10 @@
 body {
     font-family: Arial, sans-serif;
 }
-
+h1{
+    color: aqua;
+}
+    
 .container {
     max-width: 400px;
     margin: 0 auto;
