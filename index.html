@@ -3,42 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>online shopping  </title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <title>Online Cooking Oil Shopping</title>
+    <link rel="stylesheet" href="styles.css"> </head>
 <body>
     <div class="container">
         <h1>COOKING OIL</h1>
-    <h2>Your Information</h2>
-        
-          <form id="crudForm">    <h4>first Name</h4>
-        <input type="text" id="First Name" placeholder="Enter first Name" required>
-        
-              <form id="crudForm">    <h4> Last Name</h4>     
-              <input type="text" id="Last Name" placeholder="Enter Last Name" required>
-                  
-                  <form id="crudForm"> <h4>Your Current Email</h4>
-                      <input type="text" id="Your Current Email" placeholder="Enter Your Current Email" required>
-                      
-                     <form id="crudForm">   <h4>Phone Number</h4>
-                           <input type="number" id="Phone No" placeholder="Enter Phone Number" required>
-                   <br>
-                         <h2>Oil Information </h2>
-        <form id="crudForm">  <h4> Oil Name</h4>
-            <input type="text" id="itemName" placeholder="Enter Oil Name" required>
-            
-               <form id="crudForm"> <h4> Product Quantity</h4>
-            <input type="number" id="Product Quantity" placeholder="Enter Product Quantity" required>
-            <br>
-                     <form id="crudForm">
-                         <h4>Price Range</h4>
-            <input type="number" id="Price" placeholder="Enter Price" required>
-            <button type="submit">Submit</button>
-                         <button type="reset" style="background-color:red;">Clear</button>
-        </form>
-        <ul id="itemList"></ul>
-    </div>
 
-    <script src="script.js"></script>
-</body>
+        <h2>Your Information</h2>
+        <form id="crudForm">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Current Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Current Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNo">Phone Number:</label>
+                <input type="number" id="phoneNo" name="phoneNo" placeholder="Enter Phone Number" required>
+            </div>
+
+            <h2>Oil Information</h2>
+
+            <div class="form-group">
+                <label for="itemName">Oil Name:</label>
+                <input type="text" id="itemName" name="itemName" placeholder="Enter Oil Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="productQuantity">Product Quantity:</label>
+                <input type="number" id="productQuantity" name="productQuantity" placeholder="Enter Product Quantity" required>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price Range:</label>
+                <input type="number" id="price" name="price" placeholder="Enter Price" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+
+        <ul id="itemList"></ul> </div>
+
+    <script src="script.js"></script> </body>
 </html>
